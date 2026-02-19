@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Board Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="max-w-6xl mx-auto p-6">
+
+    <h1 class="text-3xl font-bold mb-6 text-black-800">
+      Job Board Dashboard
+    </h1>
+
+    <div class="bg-white p-4 rounded-lg shadow mb-6">
+      <input 
+        id="searchInput"
+        type="text"
+        placeholder="Search job title..."
+        class="border p-2 rounded w-full"
+      />
+    </div>
+
+    <div id="loading" class="text-center text-gray-500 hidden">
+      Loading jobs...
+    </div>
+
+    <div id="jobList" class="grid md:grid-cols-2 gap-6"></div>
+
+  </div>
+
+  <div id="jobModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+    <div class="bg-white w-11/12 md:w-2/3 p-6 rounded-lg relative max-h-[80vh] overflow-y-auto">
+      <button 
+        onclick="closeModal()" 
+        class="absolute top-3 right-3 text-gray-500 hover:text-black"
+      >
+        ✕
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+<div id="toast"
+     class="fixed bottom-5 right-5 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden transition-all duration-300">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

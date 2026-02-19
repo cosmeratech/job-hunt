@@ -1,0 +1,10 @@
+.favorite {
+  background-color: #facc15;
+  color: rgb(39, 36, 36);
+}
+
+body {
+  background: linear-gradient(135deg, hsl(224, 59%, 28%), #2147a1);
+  min-height: 100vh;
+  font-family: sans-serif;
+}
